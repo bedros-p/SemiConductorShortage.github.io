@@ -1,0 +1,189 @@
+﻿#banner {
+    display: inline-flex;
+    height: 15vh;
+    background-color: black;
+    border-bottom: 2px solid grey;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+#nflix {
+    display: inline-flex;
+    height: 15vh;
+    background-color: black;
+}
+#bg {
+    background-color: #0c0c0c;
+    margin:0 !important
+}
+
+#personSelect, #selectPer {
+    display: flex;
+     
+}
+
+html, body {
+    background: #0c0c0c;
+    width:100vw;
+    overflow:hidden;
+    margin:0;
+}
+
+h1, h2 {
+    font-size: 6vh;
+    color: #989898;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.per {
+    margin:5vw;
+    color: black;
+    background-color: black;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 1em;
+    outline: none;
+}
+
+.sel {
+    position: relative;
+    left: 17vw;
+    right: 25vw;
+}
+
+h3{
+    font-size:3vh;
+    font-family: 'Roboto', sans-serif;
+    color:white;
+}
+
+#user {
+    width: 12vh;
+    height: 12vh;
+    border: 2px solid grey;
+    background: #0c0c0c;
+}
+
+#containBanner {
+    width:100vw;
+    text-align: right;
+    display: inline-flex;
+}
+
+#isoriginal {
+    width: 100%;
+}
+#displayVid {
+    width: 63.3%;
+    height: 75%;
+    padding-bottom: 75%;
+    border-radius: 0;
+    position: absolute;
+    left: 19%;
+    overflow: hidden;
+    border: 0px;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+}
+
+#selShow {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#chooseShow {
+    border-radius: 10px;
+    border: 0;
+    background-color: black;
+    color: white;
+    font-size: 3vh;
+    height: 5vh;
+    display: inline-flex;
+}
+
+#space {
+    width: 63.3%;
+    height: 75%;
+    padding-bottom: 75%;
+    border-radius: 0;
+    overflow: hidden;
+    border: 0px;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+}
+
+#options {
+    position: absolute;
+    top: 90vh;
+    left: 50vw;
+    right: 50vw;
+    width:12vw;
+    font-family: 'Roboto', sans-serif;
+    color: darkgrey;
+
+}
+
+#episodenumber {
+    border-radius: 20%;
+    border: 0;
+    height: 3vh;
+    outline: none;
+    font-size:2vh;
+    text-align:center;
+    background-color:darkgrey;
+}
+
+#epicontainer {
+    text-align: end;
+    display: inline-flex;
+}
+
+label {
+    text-align:center;
+    font-size:3vh;
+}
+#nextButton{
+    color:black;
+    width:5vw;
+    height:3vh;
+    font-size:2vh;
+}
+
+p {
+    width: 12vh;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+
+.numberSE {
+    border: 0;
+    border-radius: 10px;
+    height: 3vh;
+    outline: none;
+    font-size: 2vh;
+    text-align: center;
+    background-color: darkgrey;
+}
+
+
+#aot {
+    height: 5vh;
+    display: inline-flex;
+    align-content:center;
+    width:100vw;
+}
+
+#watchAOT {
+    border-radius: 10px;
+    border: 0;
+    background-color: black;
+    color: white;
+    font-size: 3vh;
+    height: 5vh;
+    display: inline-flex;
+}

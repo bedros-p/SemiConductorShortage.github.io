@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <title>JustShippuden</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<html>
+
+
+
+<body>
+    <div id="banner">
+        <img src="nflix.png"; id="nflix" />
+        <img class="userPER"; id="user" src="USERPER" />
+    </div>
+
+    <h1 id="welcome">Welcome, USER</h1>
+    <div id="isoriginal">
+        <h2>Select the episode and then the show. Leave blank if you're just starting out.</h2>
+        <div id="selShow">
+            <button id="chooseShow" ; onclick="shippu()">Shippuden</button>
+            <input type="number" id="episodenumber"/>
+            <button id="chooseShow" ; onclick="origNaru()">Original</button>
+        </div>
+    </div>
+
+    <h3>NOTE: If you get the <i>Embed Blocked error</i>, simply go to <i>chrome://settings/content/pdfDocuments</i> and toggle the setting. After refreshing, it should work.</h3>
+</body>
+
+
+
+
+
+
+</html>
+
+<script>
+    var emptyvar = ""
+    var welcome = document.getElementById('welcome');
+
+    var userPerson = document.getElementById('user')
+
+    
+
+    var query = window.location.search.substring(1);
+    var vars = query.split("?");
+    var questionmark = vars;
+    // var pair = questionmark.replace("as=","");
+    // alert(pair);
+    if (questionmark == "as=sas") {
+        emptyvar = "Sasuke."
+        userPerson.src = "uico/sas/sas.png"
+    }
+    if (questionmark == "as=sak") {
+        emptyvar = "Sakura."
+        userPerson.src = "uico/sak/sak.png"
+    }
+    if (questionmark == "as=nar") {
+        emptyvar = "Naruto."
+        userPerson.src = "uico/nar/nar.png"
+    }
+
+    if (emptyvar !== "") {
+        welcome.innerHTML = welcome.innerHTML.replace('USER', emptyvar);
+    }
+
+    if (emptyvar == "") {
+        questionmark = questionmark.toString()
+        emptyvar = questionmark.replace("as=", "");
+        welcome.innerHTML = welcome.innerHTML.replace('USER', emptyvar);
+    }
+
+    function origNaru() {   
+        var numberEpisode = document.getElementById("episodenumber").value
+        if (numberEpisode >= 221) {
+            alert('thats above the max episodes!')
+        }
+        var urlnow = 'Original/watch.html?' + questionmark + "?" + numberEpisode
+        window.open(urlnow);
+    }
+
+    function shippu() {
+        var numberEpisode = document.getElementById("episodenumber").value
+        if (numberEpisode >= 501) {
+            alert('thats above the max episodes!')
+        }
+        var urlnow = 'Shippuden/watch.html?' + questionmark +"?"+numberEpisode
+        window.open(urlnow);
+
+    }
+
+
+    function aot() {
+        var urlnow = 'AOT/episelect.html?' + questionmark
+        window.open(urlnow)
+    }
+</script>
+

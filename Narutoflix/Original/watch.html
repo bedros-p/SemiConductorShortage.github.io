@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <title>JustShippuden</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+
+<html>
+<body>
+    <div id="banner">
+        <img src="../nflix.png" id="nflix" />
+        <img id="user" />
+    </div>
+
+    <div id="iframes">
+        <iframe id="displayVid"></iframe>
+    </div>
+
+    <div id="options">
+        <button id="nextButton" onclick="next()">Next</button>
+    </div>
+</body>
+</html>
+
+
+<script>
+    var emptyvar = ""; //create empty variable
+
+    var userPerson = document.getElementById('user'); //get the Image for the user
+    var query = window.location.search.substring(1); //get the current url
+    var vars = query.split("?"); //split the url by the questionmark
+    var episodenum = vars[1]
+    var questionmark = vars[0];
+
+
+    if (questionmark == "as=sas") {
+        emptyvar = "Sasuke.";
+        userPerson.src = "../uico/sas/sas.png";
+    }
+    if (questionmark == "as=sak") {
+        emptyvar = "Sakura.";
+        userPerson.src = "../uico/sak/sak.png";
+    }
+    if (questionmark == "as=nar") {
+        emptyvar = "Naruto.";
+        userPerson.src = "../uico/nar/nar.png";
+    }
+    var nextNum = parseInt(episodenum)
+
+    function next() {
+        if (nextNum == 220) {
+            alert('You cant go any further!')
+        }
+
+        if (nextNum !== 220) {
+            nextNum += 1
+            display.src = "iframes/" + nextNum + ".html"
+        }
+
+    }
+
+    var display = document.getElementById('displayVid')
+    display.src = "iframes/"+episodenum+".html"
+
+</script>

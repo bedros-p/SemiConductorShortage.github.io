@@ -1,0 +1,23 @@
+#img {
+    position: relative;
+    height: 20vh;
+    background-image: url("tile.png")
+}
+
+body { 
+    margin:0;
+}
+
+h1, h2, p {
+    font-family: 'Roboto', sans-serif;
+    text-align:center;
+}
+
+
+.image {
+    position: relative;
+}
+
+p {
+    font-size:1.5em;
+}

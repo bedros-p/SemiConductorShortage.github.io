@@ -6,21 +6,34 @@
     width: 100%;
     align-items: flex-end;
     justify-content: space-between;
+    margin-top:0;
 }
+
 #nflix {
     display: inline-flex;
-    height: 15vh;
+    height: 12vh;
     background-color: black;
 }
+
+
 #bg {
     background-color: #0c0c0c;
     margin:0 !important
 }
 
+
 #personSelect, #selectPer {
+    margin-top: 5vw;
+
     display: flex;
-     
+    justify-content: center;
+    flex-wrap: wrap;
 }
+
+#selectPer {
+    width: 100vw;
+}
+
 
 html, body {
     background: #0c0c0c;
@@ -35,22 +48,23 @@ h1, h2 {
     font-family: 'Roboto', sans-serif;
 }
 
+#img {
+    width: 20vh;
+    height: 20vh;
+}
 
 .per {
-    margin:5vw;
+    margin: 2vh;
     color: black;
     background-color: black;
     border-radius: 10px;
     border: 2px solid black;
-    padding: 1em;
+    padding: 1vw;
     outline: none;
+    margin-right: 4vh;
 }
 
-.sel {
-    position: relative;
-    left: 17vw;
-    right: 25vw;
-}
+
 
 h3{
     font-size:3vh;
@@ -69,6 +83,7 @@ h3{
     width:100vw;
     text-align: right;
     display: inline-flex;
+    align-content: flex-start;
 }
 
 #isoriginal {
@@ -128,7 +143,7 @@ h3{
 }
 
 #episodenumber {
-    border-radius: 20%;
+    border-radius:10px;
     border: 0;
     height: 3vh;
     outline: none;
@@ -174,8 +189,17 @@ p {
 #aot {
     height: 5vh;
     display: inline-flex;
-    align-content:center;
-    width:100vw;
+    width: 100vw;
+    font-size:3vh;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    border-radius: 10px !important;
+    background-color: black;
+    border-bottom-color: white;
+    border: 1px solid white;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
 }
 
 #watchAOT {
@@ -186,4 +210,10 @@ p {
     font-size: 3vh;
     height: 5vh;
     display: inline-flex;
+}
+
+#text {
+    display:none;
+    position: absolute !important;
+    top: 900% !important;
 }

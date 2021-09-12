@@ -1,4 +1,4 @@
-var refreshDuration = 5000;
+var refreshDuration = 10000;
 var refreshTimeout;
 var numPointsX;
 var numPointsY;

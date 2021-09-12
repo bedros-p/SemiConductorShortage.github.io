@@ -4,37 +4,22 @@ body {
     height: 100vh;
 }
 
-h1, h2, p {
-    font-family: 'Roboto', sans-serif;
-    text-align:center;
-}
-
-
-.image {
-    position: relative;
-}
-
-p {
-    font-size:1.5em;
-}
-
-html {
-    background-color: red;
-    color: white;
-    height: 100vh;
-    overflow: hidden;
-    
-}
-
 svg {
     background-color: red;
     position: absolute;
     z-index: -1;
-    top:0;
+    top: 0;
+    height:5vh !important;
 }
+html {
+    background: radial-gradient(ellipse at center, "#FF0000", darken("#FF0000", 50%) 100%);
+    overflow: hidden;
+} 
 
-svg:not(:root) {
-    overflow:visible !important;
+
+h1, h2, p {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
 
 
@@ -47,6 +32,7 @@ svg:not(:root) {
     background-color: rgba(0,0,0,0.2);
     box-shadow: 0 0 10px rgba(0,0,0,0.9) inset;
 }
+
 
 .topLinks, .topLinks:link, .topLinks:visited, .topLinks:focus, .topLinks:hover, .topLinks:active {
     color: white;

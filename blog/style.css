@@ -1,9 +1,9 @@
 body {
     margin: 0;
-    box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
+    box-shadow: 0 0 200px rgba(0,0,0,0.3) inset;
     height: 100vh;
     font-family: 'Roboto', sans-serif;
-    text-align: center;
+
 }
 
 svg {
@@ -19,7 +19,7 @@ html {
 } 
 
 
-h1, h2, p {
+h1, h2 {
     font-family: 'Roboto', sans-serif;
     text-align: center;
 }
@@ -52,3 +52,37 @@ h1, h2, p {
     text-decoration: none;
     color: darkgrey;
 }
+
+
+.post {
+    border-radius: 12px;
+    width: 60vw;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid #d3d3d3;
+    align-content: stretch;
+    flex-direction: column;
+}
+
+.blog-post {
+    text-decoration: none;
+    font-size: 120%;
+    color: black;
+}
+
+.Title {
+    font-size:160%;
+
+}
+
+.Caption {
+    margin: 0.8em;
+}
+
+.blog-image {
+    align-self: flex-end;
+    display: inline-flex;
+    position: fixed;
+    border-radius: 12px;
+}
+

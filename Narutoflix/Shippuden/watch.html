@@ -65,9 +65,7 @@
                 "method": "GET",
                 "credentials": "omit"
 
-            }).then(function (response) {
-                document.getElementById("iframes").innerHTML = response.text();
-            });
+            }).then(document.getElementById("iframes").innerHTML = response.text());
         }
     }
     var Episframe = fetch("iframes/" + episodenum + ".html", {

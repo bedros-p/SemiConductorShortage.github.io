@@ -19,7 +19,7 @@
     </div>
 
     <div id="iframes">
-        <iframe id="displayVid"></iframe>
+        REPLACEME
     </div>
 
     <div id="options">
@@ -53,17 +53,28 @@
     }
     var nextNum = parseInt(episodenum)
 
-    function next() {
+    async function next() {
         if (nextNum == 500) {
             alert('You cant go any further!')
         }
 
-        if (nextNum !== 500)
-            nextNum += 1
-            display.src = "iframes/" + nextNum + ".html"
-            
-    }
-    var display = document.getElementById('displayVid')
-    display.src = "iframes/"+episodenum+".html"
+        if (nextNum !== 500) {
+            nextNum += 1;
+            var Episframe = await fetch("iframes/" + nextNum.toString() + ".html", {
+                "body": null,
+                "method": "GET",
+                "credentials": "omit"
 
+            }).then(function (response) {
+                document.getElementById("iframes").innerHTML = response.text;
+            });
+        }
+    }
+    var Episframe = fetch("iframes/" + episodenum + ".html", {
+        "body": null,
+        "method": "GET",
+        "credentials": "omit"
+    }).then(function (response) {
+        document.getElementById("iframes").innerHTML = response.text;
+    });
 </script>

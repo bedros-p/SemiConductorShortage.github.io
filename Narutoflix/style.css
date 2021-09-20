@@ -166,6 +166,7 @@ label {
     width:5vw;
     height:3vh;
     font-size:2vh;
+    min-width:60px;
 }
 
 p {

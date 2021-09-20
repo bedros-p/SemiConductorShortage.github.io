@@ -13,13 +13,30 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
-        <script src="script.js"></script>
+        <script src="UI81.js"></script>
+        <script src="Fli82.js"></script>
     </head>
     <body>
-        <div class="LogInCard">
-            <span style="text-align: center; color: #6D6E70; text-align: center;">Flood<br></span>
-            <span>Code:<br></span>
-            <input type="text" class="ClassCode", maxlength="6"></input>
+        
+        <div class="container">
+            <span class="classkicker">classkicker</span>
+            <div class="LogInCard">
+                <span style="margin-bottom: 10px; text-align: center; color: #5b5c5e; font-size: 1.3rem; font-weight: 400;">Start Flooding<br></span>
+                <br>
+                <span class="ClassCode" id="CodeLabel" style="text-transform: capitalize !important;">Class Code:<br></span>
+                <input type="text" class="ClassCode" onkeyup="checkCode()" maxlength="6" id="Cv09" />
+                <div class="Invalid">Invalid Class Code</div>
+                <div id="botContainer">
+                    <span id="CodeLabel" class="ClassCode" style="text-transform: capitalize !important; color: rgb(91, 92, 94);">Bot Name: <br></span>
+                    <input type="text" id="BnSSEJ92" maxlength="12" class="ClassCode" />
+
+                    <span id="CodeLabel" class="ClassCode" style="text-transform: capitalize !important; color: rgb(91, 92, 94);">Bot Count:<br></span>
+                    <input type="number" id="BnU934" class="BotNumber ClassCode" max="60000" />
+                    <div id="aligner">
+                        <button type="submit" onclick="fnct(13);">Flood!</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>

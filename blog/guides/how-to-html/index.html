@@ -28,7 +28,111 @@
     <h1>How to HTML!</h1>
     <h3>God blexx the flexx.</h3>
 
-    <img src="image.png" class="codewitherror"/>
-    <p>This image has a syntax error. You'll be able to spot it by the end of the blog (or now, if you have keen eyes)</p>
+    <img src="codesample.png" class="mainimage" />
+
+    <p id="note"><b>NOTE:</b> I'll be using Google Chrome for the blog, and I highly advise you do too. This is because of the Flexbox edit chrome has built-in, and believe me when I say you'll need it.</p>
+
+
+    <div class="ContentList">
+        <ol>
+            <li>
+                <a href="#introduction">Introduction</a>
+                <ul>
+                    <li><a href="#navigation">Navigation</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#css">Okay, I created the basic template. Now what?</a></li>
+            <li><a href="#magic">how do embed magic?@!</a></li>
+        </ol>
+    </div>
+
+    <div class="sep" id="introduction"></div>
+    <h1>"Okay, so where do I start?" Is probably what you're thinking.</h1>
+    <p>Okay, so now the majestic &lt;!DOCTYPE html&gt;</p>
+    <pre style='color:#cfcfc2;background-color:#232629;'>
+    <b><span style='color:#2980b9;'>&lt;!DOCTYPE </span></b>html<b><span style='color:#2980b9;'>&gt;</span></b>
+    </pre>
+    <p>Now, HTML works just fine without it. Some people have old browsers, and that's just kept there for backwards compatibility</p>
+    <p>Now use the the &lt;html&gt; tag</p>
+    <p>One thing you should note is, a Starting tag looks like this &lt;p&gt;, whereas the Closing tag looks like &lt;/p&gt;. It is important to close your tags so that your elements dont merge. However, you might need to use an element as a container,a nd I'll be demonstrating how, with the HTML tag.</p>
+    <pre style='color:#cfcfc2;background-color:#232629;'>
+<b><span style='color:#2980b9;'>&lt;!DOCTYPE </span></b>html<b><span style='color:#2980b9;'>&gt;</span></b>
+<b>&lt;html&gt;</b>
+<b>&lt;head&gt;</b>
+
+
+<b>&lt;/head&gt;</b>
+<b>&lt;/html&gt;</b></pre>
+    <p> In this example, we're using the HTML tag to contain the html. The HTML consists of a Head tag, which we'll be using to import links and stylesheets and other data.</p>
+    <p> Our page needs a title, lets go to the head tag and add a page title!</p>
+    <pre style='color:#cfcfc2;background-color:#232629;'>
+<b><span style='color:#2980b9;'>&lt;!DOCTYPE </span></b>html<b><span style='color:#2980b9;'>&gt;</span></b>
+<b>&lt;html&gt;</b>
+    <b>&lt;head&gt;</b>
+    <b>&lt;title&gt;</b>My Page! <b>&lt;/title&gt;</b>
+    <b>&lt;/head&gt;</b>
+<b>&lt;/html&gt;</b></pre>
+    <p>Result:</p>
+    <img src="Title.png" />
+
+    <p> Notice How the Head tag contained the title tag, and the title tag contains the text?</p>
+    <p> When a tag is inside another tag, its called a Nested Element.</p>
+
+    <p>The page is still quite empty, so lets add a nice piece of text. How about: <b>Hello, Internet</b>?</p>
+    <p>
+        We'll be using the <b>h1</b> tag. You can reuse the h1 again and again, but to get varying sizes, you have a range from
+        <b>h1</b> to <b>h6</b>. <b>h2</b> is smaller than <b>h1</b>, and <b>h3</b> is smaller than <b>h2</b>, and so on until <b>h6</b>.
+    </p>
+    <p>We'll be using the <b>body</b> tag for the actual html elements.</p>
+    <pre style='color:#cfcfc2;background-color:#232629;'>
+<b><span style='color:#2980b9;'>&lt;!DOCTYPE </span></b>html<b><span style='color:#2980b9;'>&gt;</span></b>
+<b>&lt;html&gt;</b>
+    <b>&lt;head&gt;</b>
+    <b>&lt;title&gt;</b>My Page! <b>&lt;/title&gt;</b>
+    <b>&lt;/head&gt;</b>
+    
+    <b>&lt;body&gt;</b>
+    
+    <b>&lt;/body&gt;</b>
+<b>&lt;/html&gt;</b></pre>
+
+    <p>And now, the <b>h1</b>...</p>
+    <pre style='color:#cfcfc2;background-color:#232629;'>
+<b><span style='color:#2980b9;'>&lt;!DOCTYPE </span></b>html<b><span style='color:#2980b9;'>&gt;</span></b>
+<b>&lt;html&gt;</b>
+    <b>&lt;head&gt;</b>
+    <b>&lt;title&gt;</b>My Page! <b>&lt;/title&gt;</b>
+    <b>&lt;/head&gt;</b>
+
+    <b>&lt;body&gt;</b>
+    <b>&lt;h1&gt;</b>Hello<b>&lt;/h1&gt;</b>
+    <b>&lt;/body&gt;</b>
+<b>&lt;/html&gt;</b></pre>
+    <p>Okay!</p>
+    <p>Lets see how it looks!</p>
+
+    <img src="resultSomewhat.png" style="width: 50%; height: 50%; max-width: 411px; max-height: 258px;"/>
+
+    <p>It's not exactly fancy, but its a start!</p>
+
+    <div class="sep" id="navigation"></div>
+    <p>Okay, now, what if i wanted something like <a href="pastrikk.com/aboutme">pastrikk.com/aboutme/</a> rather than pastrikk.com/aboutme/myhtmlsiteiguess.html</p>
+    <p>Well, make a folder in the directory of where you want the site to be (like D:/Beans/Hello), and call it <b>aboutme</b> or whatever you want it to look like, and create a file called <b>index.html</b> in there</p>
+    <p>IT HAS TO BE NAMED INDEX.HTML as its the default for sites. Well, not necessarily <b>has</b> to, but it'll save you from a bunch of configuration later on.</p>
+    <p>Okay, lets make a demo! Okay, so we're gonna use the <span class="code">href</span></p>
+    <pre style='color:#cfcfc2;background-color:#232629;'>
+<b><span style='color:#2980b9;'>&lt;!DOCTYPE </span></b>html<b><span style='color:#2980b9;'>&gt;</span></b>
+<b>&lt;html&gt;</b>
+    <b>&lt;head&gt;</b>
+    <b>&lt;title&gt;</b>My Page! <b>&lt;/title&gt;</b>
+    <b>&lt;/head&gt;</b>
+
+    <b>&lt;body&gt;</b>
+    <b>&lt;h1&gt;</b>Hello<b>&lt;/h1&gt;</b>
+    <b>&lt;a</b><span style='color:#27ae60;'> href=</span><span style='color:#f44f4f;'>&quot;aboutme&quot;</span><b>&gt;</b>About Me! <b>&lt;/a&gt;</b>
+    <b>&lt;/body&gt;</b>
+<b>&lt;/html&gt;</b></pre>
+    <p></p>
 </body>
 </html>

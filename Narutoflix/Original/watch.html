@@ -53,19 +53,42 @@
     }
     var nextNum = parseInt(episodenum)
 
-    function next() {
-        if (nextNum == 220) {
+    async function next() {
+        if (nextNum == 500) {
             alert('You cant go any further!')
         }
 
-        if (nextNum !== 220) {
-            nextNum += 1
-            display.src = "iframes/" + nextNum + ".html"
+        if (nextNum !== 500) {
+            nextNum += 1;
+
+            e = new XMLHttpRequest();
+            e.open("GET", "iframes/"+nextNum.toString()+".html");
+            e.send(null);
+            e.onloadend = function () {
+                respz = e.responseText.split("body>")[1];
+                respz = respz.split('\n</')[0];
+                respz = respz.replaceAll('\n', '');
+                text = `id="displayVid"; frameborder="0"; scrolling="NO" title="video" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" webkitallowfullscreen="true" mozallowfullscreen="true"`;
+                respz = respz.replace(`frameborder="0";`, text);
+                document.getElementById("iframes").innerHTML = respz;
+            }
+
+
+
+
+
         }
-
     }
-
-    var display = document.getElementById('displayVid')
-    display.src = "iframes/"+episodenum+".html"
+    e = new XMLHttpRequest();
+    e.open("GET", "iframes/" + episodenum + ".html");
+    e.send(null)
+    e.onloadend = function () {
+        respz = e.responseText.split("body>")[1];
+        respz = respz.split('\n</')[0];
+        respz = respz.replaceAll('\n', '');
+        text = `id="displayVid"; frameborder="0"; scrolling="NO" title="video" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" webkitallowfullscreen="true" mozallowfullscreen="true"`;
+        respz = respz.replace(`frameborder="0";`, text);
+        document.getElementById("iframes").innerHTML = respz;
+    }
 
 </script>

@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favico.png">
     <script src="script.js"></script>
-
+    <script src="epis.js"></script>
 </head>
 
 <html>
 <body>
     <div id="banner">
         <img src="nflix.png" ; id="nflix" />
-        <img class="userPER" ; id="user" src="USERPER" />
+        <img class="userPER" ; id="user" onclick="logoutOpt()" />
     </div>
 
     <h1 id="welcome">Welcome, USER</h1>
@@ -25,6 +25,7 @@
             <button id="chooseShow" ; onclick="shippu()">Shippuden</button>
             <input type="number" id="episodenumber" />
             <button id="chooseShow" ; onclick="origNaru()">Original</button>
+        </div>
     </div>
 
     <h3>NOTE: If you get the <i>Embed Blocked error</i>, simply go to <i>chrome://settings/content/pdfDocuments</i> and toggle the setting. After refreshing, it should work.</h3>
@@ -33,79 +34,78 @@
 </html>
 
 <script>
+
+    cookies = document.cookie;
+    console.log(cookies)
+    
+    if (cookies.includes("NONERETURN") == false) {
+
+        cookie = cookies.split(";")
+
+        for (i = 0; i < cookie.length; i += 1) {
+
+
+
+
+            if (cookie[i].includes("pref")) {
+                console.log(cookie[i])
+                if (cookie[i].includes("shippuden")) {
+
+                    var urlnow = 'Shippuden'
+                    window.location.href = (urlnow);
+
+                }
+
+                if (cookie[i].includes("original")) {
+                    console.log('origin')
+                    var urlnow = 'Original'
+                    window.location.href = (urlnow);
+                }
+
+            }
+
+
+        }
+    }
+
+    else {
+        console.log("gg")
+    }
+    
+
+
     var emptyvar = ""
     var welcome = document.getElementById('welcome');
 
     var userPerson = document.getElementById('user')
-
-    
 
     var query = window.location.search.substring(1);
     var vars = query.split("?");
     var questionmark = vars;
     // var pair = questionmark.replace("as=","");
     // alert(pair);
-    if (questionmark == "as=sas") {
+    if (cookies.includes("sas")) {
         emptyvar = "Sasuke."
         userPerson.src = "uico/sas/sas.png"
     }
-    if (questionmark == "as=sak") {
+    if (cookies.includes("sak")) {
         emptyvar = "Sakura."
         userPerson.src = "uico/sak/sak.png"
     }
-    if (questionmark == "as=nar") {
+    if (cookies.includes("nar")) {
         emptyvar = "Naruto."
         userPerson.src = "uico/nar/nar.png"
+    }
+
+    if ((cookies.includes("sas") || cookies.includes("sak") || cookies.includes("nar")) == false)  {
+        window.location.href = '../Narutoflix';
     }
 
     if (emptyvar !== "") {
         welcome.innerHTML = welcome.innerHTML.replace('USER', emptyvar);
     }
 
-    if (emptyvar == "") {
-        questionmark = questionmark.toString()
-        emptyvar = questionmark.replace("as=", "");
-        welcome.innerHTML = welcome.innerHTML.replace('USER', emptyvar);
-    }
-
-    function origNaru() {   
-        var numberEpisode = document.getElementById("episodenumber").value
-        if (numberEpisode >= 221) {
-            alert('thats above the max episodes!')
-        }
-
-        if (numberEpisode == '') {
-            numberEpisode = 1 //if blank then make 1
-        }
-
-        var urlnow = 'Original/watch.html?' + questionmark + "?" + numberEpisode
-
-        window.location.href = (urlnow);
-    }
 
 
-
-    function shippu() {
-        var numberEpisode = document.getElementById("episodenumber").value
-        if (numberEpisode >= 501) {
-            alert('thats above the max episodes!');
-        }
-
-        if (numberEpisode == "") {
-            numberEpisode = 1 //if blank then make 1
-        }
-
-        var urlnow = 'Shippuden/watch.html?' + questionmark + "?" + numberEpisode
-
-
-        window.location.href = (urlnow);
-
-    }
-
-
-    function aot() {
-        var urlnow = 'AOT/episelect.html?' + questionmark
-        window.location.href = (urlnow);
-    }
 </script>
 

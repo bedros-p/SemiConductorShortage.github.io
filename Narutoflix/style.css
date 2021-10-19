@@ -1,4 +1,7 @@
-﻿#banner {
+﻿
+
+
+#banner {
     display: inline-flex;
     height: 15vh;
     background-color: black;
@@ -37,9 +40,11 @@
 
 html, body {
     background: #0c0c0c;
-    width:100vw;
-    overflow:hidden;
-    margin:0;
+    display: flex;
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+    flex-direction: column;
 }
 
 h1, h2 {
@@ -136,10 +141,14 @@ h3{
     top: 90vh;
     left: 50vw;
     right: 50vw;
-    width:12vw;
+    width: 100vw;
     font-family: 'Roboto', sans-serif;
     color: darkgrey;
-
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: stretch;
 }
 
 #episodenumber {
@@ -217,4 +226,14 @@ p {
     display:none;
     position: absolute !important;
     top: 900% !important;
+}
+
+.bannerlgt {
+    justify-content: center !important;
+}
+
+.btnLog {
+    font-size: xx-large;
+    margin: 20%;
+    margin-bottom: 0%;
 }

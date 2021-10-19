@@ -1,8 +1,8 @@
 function narutoflix() {
-    window.location = "Narutoflix/index.html"
+    window.location = "Narutoflix"
 };
 
 
 function classkicker() {
-    window.location = "Classkicker/index.html"
+    window.location = "Classkicker"
 };

@@ -7,13 +7,31 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favico.png">
     <script src="script.js"></script>
-
 </head>
+
 <body id="bg">
-        <div id="banner">
-            <img src="nflix.png" id="nflix"/>
-        </div>
-    
+    <script>
+        cookies = document.cookie;
+        console.log(cookies)
+
+        if (cookies.includes("sas")) {
+            chooseSas()
+        }
+
+        if (cookies.includes("sak")) {
+            chooseSak()
+        }
+
+        if (cookies.includes("nar")) {
+            chooseNar()
+        }
+
+    </script>
+
+    <div id="banner">
+        <img src="nflix.png" id="nflix" />
+    </div>
+
     <div id="selectPer">
         <div id="personSelect">
 

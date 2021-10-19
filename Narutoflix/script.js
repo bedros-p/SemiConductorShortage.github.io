@@ -1,20 +1,39 @@
-// JavaScript source code
+var date = new Date();
+days = 2
+date.setTime(date.getTime() + (days * 24 * 3600 * 1000)); // 2 days from now
+expires = ";path=/Narutoflix; expires=" + date.toUTCString(); //expire the user Cookie after 2 days
 
 function chooseSas() {
-    window.location.href = 'episelect.html?as=sas';
+    document.cookie = "character=sas" + expires;
+    window.location.href = 'episelect.html';
     return (1)
 }
 
 function chooseSak() {
-    window.location.href = 'episelect.html?as=sak';
+    document.cookie = "character=sak" + expires;
+    window.location.href = 'episelect.html';
     return (2)
 }
 
 function chooseNar() {
-    window.location.href = 'episelect.html?as=nar';
+    document.cookie = "character=nar" + expires;
+    window.location.href = 'episelect.html';
     return (3)
 }
 
-window.onload = function get_body() {
-    $0.remove()
+function logoutOpt() {
+    document.cookie = "ref=episelect"
+    window.location.href = 'logout.html';
+}
+
+function logout() {
+    var date = new Date();
+    days = 2
+    date.setTime(date.getTime() + (days * 24 * 3600 * 1000)); // 2 days from now
+    expires = ";path=/Narutoflix; expires=" + date.toUTCString(); //expire the user Cookie after 2 days
+
+    document.cookie = 'epis=NONERETURN' + expires
+    document.cookie = 'character=NONERETURN' + expires
+    document.cookie = 'pref=NONERETURN' + expires
+    window.location.href = "/Narutoflix"
 }

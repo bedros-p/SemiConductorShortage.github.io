@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <title>JustShippuden</title>
+    <link rel="stylesheet" href="../style.css">
+	<link rel="icon" href="../favico.png">
+    <script src='../script.js'></script>
+</head>
+
+
+<html>
+<body>
+    <div id="banner">
+        <img src="../nflix.png" id="nflix" />
+        <img id="user" onclick="logoutOpt()"/>
+    </div>
+
+    <div id="iframes">
+        REPLACEME
+    </div>
+
+    <div id="options">
+        <button id="nextButton" onclick="next()">Next</button>
+   </div>
+</body>
+</html>
+
+
+<script>
+
+    function logoutOpt() {
+        window.location.href = '../logout.html';
+    }
+    cookies = document.cookie;
+    console.log(cookies)
+
+
+    var emptyvar; //create empty variable
+
+    var userPerson = document.getElementById('user'); //get the Image for the user
+
+
+    cookie = cookies.split(";")
+    function deleteCookies() {
+        var all = document.cookie.split(";");
+
+        for (var i = 0; i < all.length; i++) {
+            var one = all[i];
+            var eqPos = one.indexOf("=");
+            var name = eqPos > -1 ? one.substr(0, eqPos) : one;
+            document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        }
+    }
+
+    for (i = 0; i < cookie.length; i += 1) {
+        if (cookie[i].includes("pref")) {
+            if (cookie[i].includes("original")) {
+                console.log('origin')
+                var urlnow = '../Original'
+                window.location.href = (urlnow);
+            }
+
+        }
+
+
+    }
+
+
+    if (cookies.includes("epis") == false) {
+        document.cookie = "epis=1"
+    }
+
+
+    else {
+        cookie = cookies.split(";")
+
+        for (i = 0; i < cookie.length; i += 1) {
+            if (cookie[i].includes("epis")) {
+                if (cookie[i].includes("EPISRETURN")) {
+                    window.location.href="../episelect.html"
+
+
+                }
+
+                else {
+                    episodenum = cookie[i].split("=")[1]
+                }
+            }
+        }
+    }
+
+    if (cookies.includes("sas")) {
+        emptyvar = "Sasuke."
+        userPerson.src = "../uico/sas/sas.png"
+    }
+    if (cookies.includes("sak")) {
+        emptyvar = "Sakura."
+        userPerson.src = "../uico/sak/sak.png"
+    }
+    if (cookies.includes("nar")) {
+        emptyvar = "Naruto."
+        userPerson.src = "../uico/nar/nar.png"
+    }
+
+
+    if ((cookies.includes("sas") || cookies.includes("sak") || cookies.includes("nar")) == false) {
+        document.getElementById('iframes').innerHTML = `<h1>Session Expired. Please Click <a href="../">here</a> to restart your session</h1>`
+
+    }
+
+    var nextNum = parseInt(episodenum)
+
+    async function next() {
+        if (nextNum == 500) {
+            alert('You cant go any further!')
+            var date = new Date();
+            days = 2
+            date.setTime(date.getTime() + (days * 24 * 3600 * 1000)); // 2 days from now
+            expires = ";path=/Narutoflix; expires=" + date.toUTCString(); //expire the user Cookie after 2 days
+
+            document.cookie = 'epis=NONERETURN' + expires
+            window.location.href = "../episelect.html"
+        }
+
+        if (nextNum !== 500) {
+            nextNum += 1;
+
+            e = new XMLHttpRequest();
+            e.open("GET", "iframes/"+nextNum.toString()+".html");
+            e.send(null);
+            e.onloadend = function () {
+                respz = e.responseText.split("body>")[1];
+                respz = respz.split('\n</')[0];
+                respz = respz.replaceAll('\n', '');
+                text = `id="displayVid"; frameborder="0"; scrolling="NO" title="video" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" webkitallowfullscreen="true" mozallowfullscreen="true"`;
+                respz = respz.replace(`frameborder="0";`, text);
+                document.getElementById("iframes").innerHTML = respz;
+                ep = nextNum.toString()
+                document.cookie = "epis=" + ep
+            }
+        }
+        if ((cookies.includes("sas") || cookies.includes("sak") || cookies.includes("nar")) == false) {
+            document.getElementById('iframes').innerHTML = `<h1>Session Expired. Please Click <a href="../">here</a> to restart your session</h1>`
+
+        }
+    }
+    e = new XMLHttpRequest();
+    e.open("GET", "iframes/" + episodenum + ".html");
+    e.send(null)
+    e.onloadend = function () {
+        respz = e.responseText.split("body>")[1];
+        respz = respz.split('\n</')[0];
+        respz = respz.replaceAll('\n', '');
+        text = `id="displayVid"; frameborder="0"; scrolling="NO" title="video" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" webkitallowfullscreen="true" mozallowfullscreen="true"`;
+        respz = respz.replace(`frameborder="0";`, text);
+        document.getElementById("iframes").innerHTML = respz;
+        if ((cookies.includes("sas") || cookies.includes("sak") || cookies.includes("nar")) == false) {
+            document.getElementById('iframes').innerHTML = `<h1>Session Expired. Please Click <a href="../">here</a> to restart your session</h1>`
+
+        }
+    }
+
+</script>

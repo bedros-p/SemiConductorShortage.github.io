@@ -140,7 +140,12 @@
                 respz = respz.replace(`frameborder="0";`, text);
                 document.getElementById("iframes").innerHTML = respz;
                 ep = nextNum.toString()
-                document.cookie = "epis=" + ep
+                var date = new Date();
+                days = 2
+                date.setTime(date.getTime() + (days * 24 * 3600 * 1000)); // 2 days from now
+                expires = ";path=/Narutoflix; expires=" + date.toUTCString(); //expire the user Cookie after 2 days
+
+                document.cookie = "epis=" + ep+expires
             }
         }
         if ((cookies.includes("sas") || cookies.includes("sak") || cookies.includes("nar")) == false) {

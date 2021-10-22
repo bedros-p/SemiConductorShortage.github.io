@@ -179,7 +179,8 @@ label {
     text-align:center;
     font-size:3vh;
 }
-#nextButton{
+
+.button{
     color:#808080;
     background-color: #0c0c0c;
     width:5vw;
@@ -192,7 +193,7 @@ label {
     transition: 400ms;
 }
 
-#nextButton:hover{
+.button:hover{
     color:white;
     border-color:white;
     background-color: black;

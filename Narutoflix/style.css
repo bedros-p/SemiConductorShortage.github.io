@@ -1,4 +1,6 @@
-﻿
+﻿button{
+    border:none;
+}
 
 
 #banner {
@@ -181,17 +183,17 @@ label {
     color:#808080;
     background-color: #0c0c0c;
     width:5vw;
-    height:3vh;
+    height:2rem;
     font-size:3vh;
     font-family: 'Roboto', sans-serif;
-    border: #808080;
+    border: 2px solid #808080;
     min-width:60px;
     transition: 400ms;
 }
 
 #nextButton:hover{
     color:white;
-    border:white;
+    border-color:white;
     background-color: black;
 }
 

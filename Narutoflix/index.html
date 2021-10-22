@@ -16,13 +16,16 @@
 
         if (cookies.includes("sas")) {
             char = 1
+            chooseSas()
         }else if (cookies.includes("sak")) {
             char = 2
+            chooseSak()
         }else if (cookies.includes("nar")) {
             char = 3
+            chooseNar()
         }
 
-        chooseChar(char)
+        // chooseChar(char)
 
     </script>
 
@@ -34,19 +37,19 @@
         <div id="personSelect">
 
             <div id="sasuke" class="sel">
-                <button class="per" id="sas" onclick="chooseChar(1)">
+                <button class="per" id="sas" onclick="chooseSas()">
                     <img src="uico/sas/sas.png" id="img" />
                 </button>
             </div>
 
             <div id="naruto" class="sel">
-                <button class="per" id="nar" onclick="chooseChar(3)">
+                <button class="per" id="nar" onclick="chooseSak()">
                     <img src="uico/nar/nar.png" id="img" />
                 </button>
             </div>
 
             <div id="sakura" class="sel">
-                <button class="per" id="sak" onclick="chooseChar(2)">
+                <button class="per" id="sak" onclick="chooseNar()">
                     <img src="uico/sak/sak.png" id="img" />
                 </button>
             </div>

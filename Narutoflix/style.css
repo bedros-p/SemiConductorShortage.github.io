@@ -87,7 +87,7 @@ h3{
 #user {
     width: 12vh;
     height: 12vh;
-    border: 2px solid grey;
+    /* border: 2px solid grey; */
     background: #0c0c0c;
 }
 

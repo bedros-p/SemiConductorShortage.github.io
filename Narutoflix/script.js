@@ -21,6 +21,13 @@ function chooseNar() {
     return (3)
 }
 
+function chooseChar(charId) {
+    charList = ["sas","sak","nar"]
+    document.cookie = `character=${charList[charId-1]}` + expires;
+    window.location.href = 'episelect.html';
+    return (charId)
+}
+
 function logoutOpt() {
     document.cookie = "ref=episelect"
     window.location.href = 'logout.html';

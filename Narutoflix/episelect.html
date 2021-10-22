@@ -38,7 +38,7 @@
     cookies = document.cookie;
     console.log(cookies)
     
-    if (cookies.includes("NONERETURN") == false) {
+    if (!cookies.includes("NONERETURN")) {
 
         cookie = cookies.split(";")
 
@@ -70,6 +70,7 @@
 
     else {
         console.log("gg")
+        window.location.href = ("index")
     }
     
 

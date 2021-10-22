@@ -20,9 +20,12 @@ function chooseNar() {
     window.location.href = 'episelect.html';
     return (3)
 }
-
+/*are u is the alive mane
+?
+?
+*/
 function chooseChar(charId) {
-    charList = ["sas","sak","nar"]
+    let charList = ["sas","sak","nar"]
     document.cookie = `character=${charList[charId-1]}` + expires;
     window.location.href = 'episelect.html';
     return (charId)

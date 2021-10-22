@@ -178,11 +178,21 @@ label {
     font-size:3vh;
 }
 #nextButton{
-    color:black;
+    color:#808080;
+    background-color: #0c0c0c;
     width:5vw;
     height:3vh;
-    font-size:2vh;
+    font-size:3vh;
+    font-family: 'Roboto', sans-serif;
+    border: #808080;
     min-width:60px;
+    transition: 400ms;
+}
+
+#nextButton:hover{
+    color:white;
+    border:white;
+    background-color: black;
 }
 
 p {

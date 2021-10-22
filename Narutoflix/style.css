@@ -90,7 +90,17 @@ h3{
     width: 12vh;
     height: 12vh;
     /* border: 2px solid grey; */
+    margin-right: 1vw;
     background: #0c0c0c;
+    transition: 400ms;
+}
+
+#user:hover{
+    filter: brightness(1.1);
+}
+
+#user:active{
+    filter:brishtness(1.25)
 }
 
 #containBanner {

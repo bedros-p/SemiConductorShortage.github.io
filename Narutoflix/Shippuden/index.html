@@ -93,18 +93,18 @@
         }
     }
 
-    if (cookies.includes("sas")) {
-        emptyvar = "Sasuke."
-        userPerson.src = "../uico/sas/sas.png"
+    var chars = {
+        "sas": "Sasuke",
+        "sak": "Sakura", 
+        "nar": "Naruto"
     }
-    if (cookies.includes("sak")) {
-        emptyvar = "Sakura."
-        userPerson.src = "../uico/sak/sak.png"
-    }
-    if (cookies.includes("nar")) {
-        emptyvar = "Naruto."
-        userPerson.src = "../uico/nar/nar.png"
-    }
+
+    Object.keys(chars).map((v) => {
+        if (cookies.includes(v)) {
+            emptyvar = `${chars[v]}.`
+            userPerson.src =`uico/${v}/${v}.png`
+        }
+    })
 
 
     if ((cookies.includes("sas") || cookies.includes("sak") || cookies.includes("nar")) == false) {

@@ -3,5 +3,5 @@ function triggerwarning() {
 }
 
 function continued() {
-    document.body.innerHTML = "<video src='apology.mp4' controls='' autoplay>"
+    document.body.innerHTML = "<video src='Apology.mp4' controls='' autoplay></video>"
 }

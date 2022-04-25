@@ -63,7 +63,7 @@ p {
     
 }
 
-.banner, .banner:visited, .banner:-webkit-any-link, a {
+span.banner, span a {
     color:white;
     display: flex;
     align-content: center;

@@ -3,6 +3,7 @@ img {
     position: relative;
     top: 0;
     box-shadow:0 0 100px -99px transparent;
+    transition: 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 img:hover {
@@ -10,12 +11,8 @@ img:hover {
     top: 10px;
     left:10px;
     box-shadow:-10px -10px 50px 6px rgb(100, 0, 0);
-}
 
-* {
-    transition: 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-
 
 h1 {
     color:white;

@@ -1,3 +1,4 @@
+
 square = document.getElementsByClassName("grabMe")[0]
 
 decayStrength = 50; //out of 100
@@ -102,6 +103,8 @@ square.addEventListener('drag', function(data){
 
 
 setInterval(function(){
+
+    
     clones = document.querySelectorAll(`[name="clone"]`)
     clones.forEach(element=>{
         element.style.opacity = 1*(1+(decayStrength/100))**((element.getAttribute("timestamp")-Date.now())*decaySpeed)

@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="blob.js" async defer></script>
     <script src="popin.js" async defer></script>
+    <script src="redirect.js" async defer></script>
 
     <style>
         .clone {
@@ -43,8 +44,8 @@
 </head>
 <body>
     <div class="top-bar" id="bg">
-        <span class="topText"><a class="topLinks" target="_blank"  href="https://github.com/SemiConductorShortage">GITHUB</a></span>
-        <span class="topText"><a class="topLinks" target="_blank" href="https://www.instagram.com/some_random_programmer/">INSTAGRAM (!YUCK!)</a></span>
+        <span class="topText"><a class="topLinks" onclick="redir(`https://github.com/SemiConductorShortage`)" >GITHUB</a></span>
+        <span class="topText"><a class="topLinks" onclick="redir(`https://www.instagram.com/some_random_programmer/`)" >INSTAGRAM (!YUCK!)</a></span>
 
     </div>
     <!--hello student-->
@@ -60,18 +61,26 @@
     <br /><br /><br />
     <h1 class="bigBanner">PROJECTS</h1>
     <div class="sep"></div>
-    <span class="banner"><a target="_blank" href="https://github.com/SemiConductorShortage/Elite-Express-Tracking">SHIPMENT TRACKER</a></span>
+    <span class="banner"><a onclick="redir('https://github.com/SemiConductorShortage/Elite-Express-Tracking')" >SHIPMENT TRACKER</a></span>
     <p>A simple Python tool to scrape EliteExpress for details on your Airway Bill Number</p>
     <center>
         <img src="tracker.png" alt="the output of the program including weight of the package, stages of delivery, status and count of packages">
     </center>
-    <span class="banner"><a target="_blank" href="https://github.com/SemiConductorShortage/BadEngine">BASIC 2D ENGINE</a></span>
+    <span class="banner"><a onclick='redir("https://github.com/SemiConductorShortage/BadEngine")' >BASIC 2D ENGINE</a></span>
     <p>A basic 2D engine that i made for the purpose of learning </p>
     <center>
         <img src="render.png" alt="a square near the corner with 4 other squares at the center">
     </center>
     <p>It is in no way suitable for actual 2D development</p>
+    
     <div draggable="true" class="grabMe"></div>
-    <p>Oh, and try grabbing the red circle</p>
+    <br>
+    <div class="sep"></div>
+
+    <h1>What is this site?</h1>
+    <p>It's a collection of all my projects and experiments, like the red circle above and to the left, try grabbing it!</p>
+
+    <div class="sep"></div>
+    <h1>Educational programming resources coming soon!</h1>
 </body>
 </html>

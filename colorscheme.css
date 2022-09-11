@@ -1,0 +1,34 @@
+/*
+ * Copyright (c) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ *
+ * Project:    Nord
+ * Version:    0.2.0
+ * Repository: https://github.com/arcticicestudio/nord
+ * License:    MIT
+ * References:
+ *   https://www.w3.org/TR/css-variables
+ *   https://www.w3.org/TR/selectors/#root-pseudo
+ *   https://drafts.csswg.org/css-variables
+ *   https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables
+ *   http://warpspire.com/kss
+ *   https://github.com/kss-node/kss-node
+ */
+
+/*
+Thanks for the color scheme!
+*/
+
+:root {
+    --dark-bg: #2e3440;
+    --bg: #3b4252;
+    --light-bg: #434c5e;
+    --lighter-bg: #4c566a;
+    --text-light: #e5e9f0;
+    --text-teal: #8fbcbb;
+    --text-cyan: #88c0d0;
+    --text-frost: #81a1c1;
+    --text-blue: #5e81ac;
+    --text-red: #bf616a;
+    --text-numbers: #b48ead;
+  }

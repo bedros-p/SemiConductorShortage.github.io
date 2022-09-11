@@ -1,0 +1,37 @@
+.transitionable {
+    transition:250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+@media (max-width:695px) {
+    logoPortion tab {
+        display:none;
+    }
+}
+
+
+@media (max-width:390px) {
+    navigation {
+        justify-content: flex-end;
+    }
+
+    navigation tab{
+        display:none;
+    }
+    hamburger-menu{
+        display:inline-block;
+    }
+}
+@media (min-width:391px) {
+    content-menu{
+        display:none !important;
+    }
+}
+
+@media (min-width:1270px){
+
+    #top-text{
+        display: flex;
+        justify-content: space-around;
+    }       
+}

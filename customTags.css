@@ -1,0 +1,123 @@
+body, html {
+    margin:0;
+    --logoSize: 70px;
+    --menuSize: 50px;
+}
+
+/*Navbar section*/
+navbar {
+    position:sticky;
+    top:0;
+    display:flex;
+    justify-content: space-between;
+    /* padding: 20px; */
+}
+
+navigation {
+    width: 70%;
+    display: flex;
+    padding-right: 10px;
+    justify-content: space-between;
+    max-width: 500px;
+    align-items: center;
+}
+
+/*Navbar section - Logo*/
+logo {
+    width: var(--logoSize);
+    height: var(--logoSize);
+
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    background-image: url("circle.svg")
+}
+logoPortion {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+
+tab:not(logoPortion tab){
+    padding-inline: 3px;
+}
+
+
+
+/* CONTENT STUFF! */
+hb {
+    margin-top:.5em;
+    display: block;
+    font-size: 2.1em;
+    font-weight: bold;
+
+    text-align: center;
+    margin-inline: auto;
+    width: 90%;
+}
+
+hs {
+    margin-top:.5em;
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+
+    text-align: center;
+    margin-inline: auto;
+    width: 60%;
+}
+
+main p, main li {
+    margin-inline:3rem;
+}
+
+pc {
+    margin-top:1rem;
+    text-align: center;
+    display: block;
+    font-size:1.2rem;
+}
+
+
+/*Menus*/
+/*ICON*/
+hamburger-menu {
+    display:none; /*hidden by default*/
+    width: var(--menuSize);
+    height: var(--menuSize);
+    background: url("menu.svg");
+    background-size: cover;
+}
+
+hamburger-menu.clicked {
+    rotate:45deg;
+}
+
+/*THE MENU*/
+content-menu {
+    display:flex;
+    overflow-x:hidden;
+    width:0;
+    height:100%;
+    background: var(--dark-bg);
+    position: fixed;
+    right: 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+content-menu.active{
+    display: flex;
+    height: 100%;
+    width: 50vw;
+}
+
+
+.filler-image {
+    display: block;
+    width: 50%;
+    margin-inline: auto;
+    max-width: 300px;
+}

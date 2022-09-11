@@ -1,0 +1,57 @@
+@import url("colorscheme.css");
+@import url("customTags.css");
+@import url('https://fonts.googleapis.com/css2?family=Jost');
+
+body {
+    background:var(--bg);
+    color:var(--text-light);
+    font-family: 'Jost', sans-serif;
+}
+
+navbar {
+    background: rgba(67, 76, 94, .5); /*--light-bg in rgba with an opacity of .5 */
+    backdrop-filter: blur(3px) contrast(95%); /*frosted glass effect, yes, i know frosted glass has an opacity of .1 - .2, i like it this way though*/
+}
+
+navigation {
+    text-shadow: 0.5px 0.5px 0 var(--text-cyan);
+}
+
+hb,hs {
+    text-shadow: 0 0 2px var(--text-cyan);
+    border-bottom: 2px solid var(--text-frost);
+}
+
+b {color:var(--text-cyan)}
+i{color:var(--text-red)}
+
+ol li::marker,liveBirthday,liveProgramCounter {
+    color:var(--text-numbers)
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-light);
+    white-space: nowrap;
+}
+
+section a {
+    background: var(--text-cyan);
+    padding: 8px;
+    border-radius: 11px;
+}
+
+.elite {
+    max-width:700px;
+
+}
+
+/*Just to solve the whole navigation issue with a fixed bar*/
+section::before { 
+    display: block; 
+    content: " "; 
+    margin-top: -70px; 
+    height: 70px; 
+    visibility: hidden; 
+    pointer-events: none;
+}

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="64px"
+   height="64px"
+   viewBox="0 0 64 64"
+   version="1.1"
+   id="svg601"
+   sodipodi:docname="menu.svg"
+   inkscape:version="1.1.2 (0a00cf5, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     showgrid="false"
+     inkscape:snap-bbox="false"
+     inkscape:zoom="8"
+     inkscape:cx="33.5"
+     inkscape:cy="37.75"
+     inkscape:window-width="1423"
+     inkscape:window-height="825"
+     inkscape:window-x="463"
+     inkscape:window-y="140"
+     inkscape:window-maximized="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     id="namedview2274" />
+  <defs
+     id="defs598" />
+  <g
+     inkscape:label="Menu"
+     inkscape:groupmode="layer"
+     id="layer1"
+     stroke="#e5e9f0"
+     stroke-width="3"
+     paint-order="fill">
+    <rect
+       id="menu-0"
+       width="37.700989"
+       height="11.568298"
+       x="23.111712"
+       y="7.4773779"
+       fill="#2e3440"
+       ry="3" />
+    <rect
+       id="menu-1"
+       width="37.700989"
+       height="11.568298"
+       x="23.111712"
+       y="26.215851"
+       fill="#2e3440"
+       ry="3" />
+    <rect
+       id="menu-2"
+       width="37.700989"
+       height="11.568298"
+       x="23.111712"
+       y="44.953796"
+       fill="#2e3440"
+       ry="3" />
+    <rect
+       id="menu-0-dot"
+       width="15.118111"
+       height="11.467816"
+       x="3.2677166"
+       y="7.5590553"
+       fill="#20232d"
+       ry="5" />
+    <rect
+       id="menu-1-dot"
+       width="15.118111"
+       height="11.467816"
+       x="3.2677166"
+       y="26.266092"
+       fill="#20232d"
+       ry="5" />
+    <rect
+       id="menu-2-dot"
+       width="15.118111"
+       height="11.467816"
+       x="3.2677166"
+       y="44.972599"
+       fill="#20232d"
+       ry="5" />
+  </g>
+</svg>
